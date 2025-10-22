@@ -24,7 +24,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [0] = LAYOUT(
 	KC_ESC, 	KC_1,   	KC_2,   	KC_3,  		KC_4,   	KC_5,   	KC_6,   	KC_7,   	KC_8,   	KC_9,  		KC_0,   	KC_MINS,	KC_EQL, 	KC_BSPC,
 	KC_TAB, 	KC_Q,   	KC_W,   	KC_E,  		KC_R,   	KC_T,   	KC_Y,   	KC_U,   	KC_I,   	KC_O,  		KC_P,   	KC_LBRC,	KC_RBRC, 	KC_BSLS,
-	KC_CAPS,	MT(MOD_LGUI, KC_A),   	MT(MOD_LALT, KC_S),   	MT(MOD_LSFT, KC_D),  		MT(MOD_LCTL, KC_F),   	KC_G,   	KC_H,   	MT(MOD_RCTL, KC_J),   	MT(MOD_RSFT, KC_K),   	MT(MOD_LALT, KC_L),  		MT(MOD_RGUI, KC_SCLN),	KC_QUOT, 	            KC_ENT,
+	LT(7, KC_ESC),	MT(MOD_LGUI, KC_A),   	MT(MOD_LALT, KC_S),   	MT(MOD_LSFT, KC_D),  		MT(MOD_LCTL, KC_F),   	KC_G,   	KC_H,   	MT(MOD_RCTL, KC_J),   	MT(MOD_RSFT, KC_K),   	MT(MOD_LALT, KC_L),  		MT(MOD_RGUI, KC_SCLN),	KC_QUOT, 	            KC_ENT,
 	KC_LSFT,	KC_Z,   	KC_X,   	KC_C,  		KC_V,   	KC_B,   	KC_N,   	KC_M,   	KC_COMM,	KC_DOT,		KC_SLSH,	KC_RSFT,	KC_UP,		KC_DEL,
 	KC_LCTL,	KC_LALT,	KC_LGUI,										KC_SPC, 							KC_RGUI,	MO(1),   	KC_LEFT,	KC_DOWN,    KC_RGHT),
 
@@ -76,6 +76,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	_______,    _______,   	_______,   	_______,  	_______,   	_______,   	_______,   	_______,   	SIDE_SPD,	SIDE_SPI,  	_______,	_______,  	SIDE_VAI,    _______,
 	_______,	_______,	_______,										_______, 							_______,	_______,   	SIDE_MOD,	SIDE_VAD,    SIDE_HUI)
 };
+
+// mouse
+[7] = LAYOUT(
+	_______, 	_______,   	_______,   	_______,  		_______,   	_______,   	_______,   	_______,   	_______,   	_______,  		_______,   	_______,	_______, 	_______,
+	_______, 	_______,   	_______,   	_______,  		_______,   	_______,   	_______,   	MS_BTN1, MS_BTN3, MS_BTN2, MS_ACL2, _______,	_______, 	_______,
+	_______,	_______,   	_______,   	_______,  		_______,   	_______,   	MS_LEFT, MS_DOWN, MS_UP,   MS_RGHT, MS_ACL1,   		_______,	_______, 	            _______,
+	_______,	_______,   	_______,   	_______,  		_______,   	_______,   	MS_WHLL, MS_WHLD, MS_WHLU, MS_WHLR, MS_ACL0,   	   			_______,	_______,		_______,
+	_______,	_______,	_______,										_______, 							_______,	_______,   	_______,	_______,    _______),
 
 
 const is31_led PROGMEM g_is31_leds[RGB_MATRIX_LED_COUNT] = {
